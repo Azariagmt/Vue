@@ -1,0 +1,23 @@
+<template>
+<div class="row">
+<app-quote v-for="quote in quotes" @click.native="deleteQuote()">{{quote}}</app-quote>
+</div>
+</template>
+
+<script>
+import Quote from './Quote.vue';
+
+export default {
+    props: ['quotes'],
+    methods:{
+
+    },
+    components: {
+        appQuote: Quote
+    }
+}
+</script>
+
+<style scoped>
+
+</style>
